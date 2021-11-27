@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {Alert} from 'react-native';
 import auth from '@react-native-firebase/auth';
 
 import {Header} from '../../components/Header/Header';
 import {Section} from '../../components/Section/Section';
+import {handleError} from '../../util/handleError';
 import {MainStack} from '../../routes/Route';
 
 import {Container} from './home';
@@ -23,10 +23,7 @@ export const Home: React.FC<IHome> = ({navigation}) => {
     try {
       await auth().signInAnonymously();
     } catch (err: any) {
-      Alert.alert(
-        'Aviso',
-        'Não foi possível acessar suas mensagens. Reinicie o aplicativo e tente novamente',
-      );
+      handleError(err);
     }
   };
 
