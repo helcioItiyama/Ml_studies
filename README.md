@@ -29,10 +29,10 @@ You just need to run the following commands:
 
 ```bash
 # Clone this repository
-$ https://github.com/helcioItiyama/ml_studies.git
+$ https://github.com/helcioItiyama/Ml_studies.git
 
 # Go into the repository
-$ cd ml_studies
+$ cd Ml_studies
 
 # Install dependencies
 $ npm install
